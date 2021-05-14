@@ -53,7 +53,7 @@ const getSCSS = (chunk, level = 0) => {
 
 		scss = scss.slice(0, -2);
 	} else {
-		scss += chunk;
+		scss += chunk.startsWith('.') ? `'${chunk}'` : chunk;
 	}
 
 
